@@ -19,7 +19,7 @@ class SEInvProblem(BaseSimulation):
         return f
 
     def forward_model(self, m):
-        t = np.maximum(self.survey.locations, 1e-12)
+        t = np.maximum(self.survey.locations, 1e-8)
         
         eta, tau, c = m
 
